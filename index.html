@@ -3,50 +3,72 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>בת המצווה של גאיה</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom right, #ffe6f0, #ccf2ff);
             margin: 0;
-            padding: 0;
-            text-align: center;
-            direction: rtl;
-        }
-        .container {
             padding: 2em;
+            text-align: center;
         }
         h1 {
             color: #d63384;
         }
-        .info {
-            font-size: 1.2em;
-            margin: 1em 0;
+        form {
+            background: white;
+            padding: 1.5em;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .button {
-            display: inline-block;
+        label {
+            display: block;
+            margin: 0.5em 0 0.2em;
+            text-align: right;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        button {
             background-color: #28a745;
             color: white;
-            padding: 0.8em 1.5em;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 8px;
-            margin-top: 2em;
+            border: none;
         }
-        .button:hover {
+        button:hover {
             background-color: #218838;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>בת המצווה של גאיה</h1>
-        <div class="info">🎉 מסיבת בת מצווה – מסיבת בריכה 🎉</div>
-        <div class="info">📅 מתי: 13.05.2025 בשעה 19:00</div>
-        <div class="info">📍 איפה: אולם "הבועה", פלוטיצקי 17, ראשון לציון</div>
-        <div class="info">🎶 בתכנית: אוכל, מוזיקה, ריקודים</div>
-        <a class="button" href="https://forms.gle/vuyPsk6QJWpHDLgr5" target="_blank">לאישור הגעה</a>
-    </div>
+    <h1>בת המצווה של גאיה 🎉</h1>
+    <p>13.05.2025 • שעה 19:00 • אולם "הבועה", פלוטיצקי 17, ראשון לציון</p>
+    <form action="https://formsubmit.co/Mor.biren@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <label>שם מלא:</label>
+        <input type="text" name="שם מלא" required>
+        
+        <label>האם תגיעו?</label>
+        <select name="האם תגיעו">
+            <option value="כן">כן</option>
+            <option value="לא">לא</option>
+            <option value="אולי">אולי</option>
+        </select>
+        
+        <label>כמה אנשים יגיעו?</label>
+        <input type="number" name="מספר משתתפים" min="1">
+        
+        <label>הערות נוספות:</label>
+        <textarea name="הערות"></textarea>
+        
+        <button type="submit">שלח אישור הגעה</button>
+    </form>
 </body>
 </html>
